@@ -6,7 +6,6 @@ import {
 } from "https://deno.land/std@0.95.0/testing/asserts.ts";
 
 Deno.test("format", () => {
-  assertStrictEquals(format("Hello, {:?}!", "Carter"), 'Hello, "Carter"!');
   assertStrictEquals(format("Hello, {}!", true), "Hello, true!");
   assertStrictEquals(format("Hello, {}!", "Carter"), "Hello, Carter!");
   assertStrictEquals(format("Hello, {:?}!", "Carter"), 'Hello, "Carter"!');
@@ -25,6 +24,6 @@ Deno.test("format", () => {
 
   assertStrictEquals(
     format("{} {}", "United States", 1776),
-    "United States 1776",
+    "United States 1776"
   );
 });
