@@ -30,7 +30,7 @@ jobs:
       - name: Setup Deno
         uses: denoland/setup-deno@main
         with:
-          deno-version: v1.x
+          deno-version: ${{ matrix.deno }}
 
       - name: Cache Dependencies
         run: deno cache deps.ts
