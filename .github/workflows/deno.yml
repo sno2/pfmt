@@ -32,9 +32,6 @@ jobs:
         with:
           deno-version: ${{ matrix.deno }}
 
-      - name: Cache Dependencies
-        run: deno cache mod.ts
-
       - name: Run Tests [Stable]
         run: deno test -A
 
